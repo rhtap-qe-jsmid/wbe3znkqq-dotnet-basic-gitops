@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: wbe3znkqq-dotnet-basic-gitops
+  description: This is GitOps manifest for wbe3znkqq-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=wbe3znkqq-dotnet-basic
+    backstage.io/kubernetes-id: wbe3znkqq-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: rhtap-qe-jsmid/wbe3znkqq-dotnet-basic-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:wbe3znkqq-dotnet-basic
